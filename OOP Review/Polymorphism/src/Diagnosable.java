@@ -1,12 +1,19 @@
 public interface Diagnosable {
     double getTemperature();
-/* TODO */
+
+/* TODO
 Declare a hasFever method that reutrns true is the temperature
-is greater than 100.4
+is greater than 100.4*/
+    default boolean hasFever() {
+        return getTemperature() > 100.4;
+    }
     int getSystolic();
     int getDiastolic();
     void setTemperature(double t);
-/* TODO */
+
+/* TODO
 Decleare two setters. One for systolic and one for diastolic. 
-Check the getters to infer the parameter types.
+Check the getters to infer the parameter types.*/
+    void setSystolic(int s);
+    void setDiastolic(int s);
 }
