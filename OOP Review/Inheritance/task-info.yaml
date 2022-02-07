@@ -3,8 +3,8 @@ files:
 - name: src/Shape.java
   visible: true
   placeholders:
-  - offset: 243
-    length: 170
+  - offset: 239
+    length: 82
     placeholder_text: '/* TODO : Implement a constructor that takes in a String as
       parameter and sets the name of this object.*/'
     initial_state:
@@ -52,7 +52,7 @@ files:
 - name: src/Square.java
   visible: true
   placeholders:
-  - offset: 157
+  - offset: 0
     length: 787
     placeholder_text: |-
       /* TODO : Complete the Square class.
@@ -158,5 +158,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Fri, 04 Feb 2022 00:45:22 UTC
+  time: Mon, 07 Feb 2022 01:11:44 UTC
 record: -1
