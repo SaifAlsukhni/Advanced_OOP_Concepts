@@ -27,17 +27,31 @@ public class Database {
         this.data = data;
     }
 
+    /* TODO
+    This constructor should take the contents of a CSV file and initialize the member variables of the Database class.
+    */
     public Database(String contents) {
-/* TODO 
-This constructor should take the contents of a CSV file and initialize the memember variables of the Database class.
-*/
+        String[] csv = contents.split("\n"); //split each line as a set of data
+        this.colNames = csv[0].split(","); //split column names from the first line in the csv by a comma
+
+        this.numRows = csv.length - 1; //not counting the first line
+        data = new String[this.numRows][this.colNames.length]; //2D array of string objects
+
+        //loop to split each row at the comma as a set of data
+        for (int i = 1; i < csv.length; i++)
+            data[i - 1] = csv[i].split(",");
     }
 
+    /* TODO
+    This method should return the data contained on row "row" and the column matching  @columname */
     public String getValue(String columnName,int row){
-/* TODO */
-This method should return the data contained on row "row" and the column matching  @columname
+        String value = "";
+        for (int i = 0; i < this.colNames.length; i++) {
+            if (colNames[i].equals(columnName))
+                value = data[row][i];
+        }
+        return value;
     }
-
 }
 
 

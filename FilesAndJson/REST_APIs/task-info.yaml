@@ -160,8 +160,8 @@ files:
 - name: src/TVShowsDatabase.java
   visible: true
   placeholders:
-  - offset: 415
-    length: 241
+  - offset: 499
+    length: 760
     placeholder_text: |-
       Create a method getURLSource that returns a String and gets a URL object as a parameter. It should also throw an exception.
       This method should read the open stream of the url and concatenate it in a String. It should then return that String.
@@ -169,8 +169,8 @@ files:
       length: 241
       offset: 415
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |2-
           public String getURLSource(URL url) throws IOException{
               // This is like reading from the keyboard...
@@ -184,8 +184,8 @@ files:
               scan.close();
               return "{\"result\":"+result+"}";
           }
-  - offset: 840
-    length: 166
+  - offset: 1442
+    length: 0
     placeholder_text: "/* TODO \nYou have to use the url to retrieve the contents\
       \ of the website. \nThis will be a String, but in JSON format. Use the auxiliary\
       \ function you created above. */"
@@ -193,31 +193,31 @@ files:
       length: 166
       offset: 840
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: '        String result = getURLSource(url);'
-  - offset: 1022
-    length: 44
+  - offset: 1458
+    length: 68
     placeholder_text: "/* TODO \nRemember to return a JSON object.*/"
     initial_state:
       length: 44
       offset: 1022
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: (JsonObject) Jsoner.deserialize(result, new JsonObject())
-  - offset: 1217
-    length: 43
+  - offset: 1669
+    length: 15
     placeholder_text: "/* TODO \nFill in this data type (Object) */"
     initial_state:
       length: 43
       offset: 1217
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: URL
-  - offset: 1271
-    length: 41
+  - offset: 1690
+    length: 4
     placeholder_text: |-
       /* TODO
       Fill in this datatype (Object) */
@@ -225,11 +225,11 @@ files:
       length: 41
       offset: 1271
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: URL
-  - offset: 1349
-    length: 52
+  - offset: 1723
+    length: 0
     placeholder_text: |-
       /* TODO
       Read the information coming from the web
@@ -238,21 +238,21 @@ files:
       length: 52
       offset: 1349
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: ' String result = getURLSource(url);'
-  - offset: 1417
-    length: 42
+  - offset: 1738
+    length: 69
     placeholder_text: "/* TODO \nreturn the appropriate result.\n*/"
     initial_state:
       length: 42
       offset: 1417
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: (JsonObject) Jsoner.deserialize(result, new JsonObject());
-  - offset: 1559
-    length: 207
+  - offset: 2572
+    length: 25
     placeholder_text: "/* TODO \nThis should return a String with each show in four\
       \ fields:\nName:the name of the show\nLink:the link to the show\nrating average:The\
       \ rating average of teh show, and \nsummary, the summary of the show.*/"
@@ -260,8 +260,8 @@ files:
       length: 207
       offset: 1559
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       JsonArray shows = (JsonArray) doc.get("result");
               for(Object r : shows){
@@ -272,16 +272,16 @@ files:
                   results += "Rating average:"+(BigDecimal)((JsonObject)obj.get("rating")).get("average")+"\n";
                   results += "Summary:"+(String)obj.get("summary")+"\n";
               }
-  - offset: 1862
-    length: 116
+  - offset: 2668
+    length: 389
     placeholder_text: "/* TODO\nGiven a String with some text in it, write that text\
       \ to a file. \nThe name of the file is given in outfile */"
     initial_state:
       length: 116
       offset: 1862
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       try(DataOutputStream out = new DataOutputStream(new FileOutputStream(outfile))){
                   out.writeBytes(text);
@@ -315,5 +315,8 @@ files:
     \ some text in it, write that text to a file. \nThe name of the file is given\
     \ in outfile */\n    }\n\n}\n"
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Fri, 11 Mar 2022 01:13:59 UTC
 record: -1
